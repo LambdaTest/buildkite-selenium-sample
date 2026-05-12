@@ -1,4 +1,4 @@
-# Run Selenium Tests using BuildKite CI/CD — TestMu AI (Formerly LambdaTest)
+# Run Selenium Tests using BuildKite CI/CD — TestMu AI (Formerly LambdaTest)
 
 ![171934563-4806efd2-1154-494c-a01d-1def95657383 (1)](https://user-images.githubusercontent.com/70570645/172273386-fa9606ac-3e63-4b2e-8978-3142add3e038.png)
 
