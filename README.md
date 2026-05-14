@@ -1,101 +1,113 @@
-# Run Selenium Tests using BuildKite CI/CD — TestMu AI (Formerly LambdaTest)
-
-![171934563-4806efd2-1154-494c-a01d-1def95657383 (1)](https://user-images.githubusercontent.com/70570645/172273386-fa9606ac-3e63-4b2e-8978-3142add3e038.png)
+# Run Selenium Tests with Buildkite CI on TestMu AI (Formerly LambdaTest)
 
 <p align="center">
-  <a href="https://www.testmuai.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample" target="_bank">Blog</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.testmuai.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample" target="_bank">Docs</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.testmuai.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample" target="_bank">Learning Hub</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.testmuai.com/newsletter/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample" target="_bank">Newsletter</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.testmuai.com/certifications/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample" target="_bank">Certifications</a>
-  &nbsp; &#8901; &nbsp;
-  <a href="https://www.youtube.com/@TestMuAI" target="_bank">YouTube</a>
+  <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
+  <a href="https://pypi.org/project/pytest/"><img src="https://img.shields.io/pypi/v/pytest.svg?style=for-the-badge&labelColor=000000" alt="pytest version"></a>
+  <a href="https://community.testmuai.com/"><img src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&labelColor=000000" alt="Community"></a>
 </p>
-&emsp;
-&emsp;
-&emsp;
 
+## Getting Started
 
-## Documentation
+[TestMu AI](https://www.testmuai.com/) (Formerly LambdaTest) is the world's first full-stack AI Agentic Quality Engineering platform that empowers teams to test intelligently, smarter, and ship faster. Built for scale, it offers a full-stack testing cloud with 10K+ real devices and 3,000+ browsers. With AI-native test management, MCP servers, and agent-based automation, TestMu AI supports Selenium, Appium, Playwright, and all major frameworks.
 
-Documentation for running this example can be found [here](https://www.testmuai.com/support/docs/buildkite-integration-with-lambdatest/).
+With TestMu AI (Formerly LambdaTest), you can trigger pytest Selenium tests from a Buildkite CI pipeline on a scalable cloud browser grid. This sample shows how to configure Buildkite CI to run Selenium tests on the TestMu AI cloud.
 
+- [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
+- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/buildkite-integration-with-lambdatest/) for the full setup walkthrough.
 
-## Tutorials 📙
+### Prerequisites
 
-Check out our latest tutorials on pytest automation testing 👇
+- Python 3.8 or higher
+- pip
+- pytest
+- A TestMu AI (Formerly LambdaTest) account with your username and access key
 
+### Setup
 
-* [Basics Of The pytest Framework](https://www.testmuai.com/blog/selenium-python-pytest-testing-tutorial/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [Setting Up pytest: Installation And Getting Started](https://www.testmuai.com/blog/test-automation-using-pytest-and-selenium-webdriver/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [Pytest testing Using Selenium WebDriver](https://www.testmuai.com/blog/selenium-webdriver-with-python/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [Parallel Testing With pytest Selenium](https://www.testmuai.com/blog/pytest-tutorial-parallel-testing-with-selenium-grid/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [Parameterization In Selenium pytest](https://www.testmuai.com/blog/parameterization-in-pytest-with-selenium/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [Automated Browser Testing With Selenium pytest Fixtures](https://www.testmuai.com/blog/end-to-end-tutorial-for-pytest-fixtures-with-examples/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [Executing Multiple Test Cases From Single File](https://www.testmuai.com/blog/pytest-tutorial-executing-multiple-test-cases-from-single-file/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [How To Stop Test Suites After ‘N’ Test Failures](https://www.testmuai.com/blog/how-to-stop-test-suite-after-n-test-failures-in-pytest/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [Generating Test Reports In Selenium pytest](https://www.testmuai.com/blog/pytest-report-generation-for-selenium-automation-scripts/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+Clone and install dependencies:
 
+```bash
+git clone https://github.com/LambdaTest/buildkite-selenium-sample && cd buildkite-selenium-sample
+pip install -r requirements.txt
+```
 
-Please refer to our [PyTest Tutorial | Selenium With Python | Learn PyTest In 90 minutes | TestMu AI](https://www.youtube.com/watch?v=UzkuOACmBpA). ▶️
+Set your credentials as environment variables.
 
-Subscribe To Our [TestMu AI YouTube Channel 🔔](https://www.youtube.com/@TestMuAI) and keep up-to-date on the latest video tutorial around software testing world.
+**macOS / Linux:**
 
+```bash
+export LT_USERNAME="YOUR_USERNAME"
+export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+```
 
-## Documentation & Resources :books:
+**Windows:**
 
-      
-Visit the following links to learn more about TestMu AI's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
+```bash
+set LT_USERNAME="YOUR_USERNAME"
+set LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+```
 
-* [TestMu AI Documentation](https://www.testmuai.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [TestMu AI Blog](https://www.testmuai.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* [TestMu AI Learning Hub](https://www.testmuai.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)    
+### Run tests
 
+```bash
+pytest
+```
 
-## TestMu AI Community :busts_in_silhouette:
+View results on your TestMu AI dashboard.
 
-The [TestMu AI Community](https://community.testmuai.com/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+### Local testing with TestMu AI Tunnel
 
+To test locally hosted apps, set up the TestMu AI tunnel. OS-specific guides:
 
-## What's New At TestMu AI ❓
+- [Local Testing on Windows](https://www.testmuai.com/support/docs/local-testing-for-windows/)
+- [Local Testing on macOS](https://www.testmuai.com/support/docs/local-testing-for-macos/)
+- [Local Testing on Linux](https://www.testmuai.com/support/docs/local-testing-for-linux/)
 
-To stay updated with the latest features and product add-ons, visit [Changelog](https://changelog.testmuai.com/) 
-      
+Add the following to your capabilities:
 
-## 🚀 LambdaTest is Now TestMu AI
+```js
+tunnel: true,
+```
 
-👋 Welcome to TestMu AI, the next evolution of LambdaTest. As of January 2026, [LambdaTest is Now TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/) - we have evolved from a cross-browser testing cloud into a unified, AI-native quality engineering platform designed for the modern DevOps era.
+## Contributions
 
-Whether you have been part of the LambdaTest community for years or are just discovering TestMu AI, our mission remains the same: to help you ship faster with high-scale test execution, autonomous testing, and deep quality analytics.
+Contributions are welcome. Open an issue to discuss your idea before submitting a pull request. When reporting bugs, include your Python version, OS, and pytest version.
 
-### 🔄 Our Rebrand Journey
+## TestMu AI (Formerly LambdaTest) Community
 
-In 2017, we introduced LambdaTest with a clear mission: to become the world's most trusted cloud testing platform. We built a scalable, high-performance test cloud that eliminated flakiness, improved developer feedback cycles, and accelerated release velocity for teams worldwide.
+Connect with testers and developers in the [TestMu AI Community](https://community.testmuai.com/). Ask questions, share what you are building, and discuss best practices in test automation and DevOps.
 
-As LambdaTest grew, we expanded the platform into Test Intelligence, Visual Regression Testing, Accessibility Testing, API Testing, and Performance Testing, covering the entire testing lifecycle. These capabilities enabled teams to test any stack, on any technology, at enterprise scale.
+## TestMu AI (Formerly LambdaTest) Certifications
 
-Over time, we rebuilt the architecture to be AI-native from the ground up. What began as LambdaTest's high-performance testing cloud has now evolved into TestMu AI, an AI-native, multi-agent platform redefining modern quality engineering.
+Earn free [TestMu AI Certifications](https://www.testmuai.com/certifications/) for testers, developers, and QA engineers. Validate your skills in Selenium, Cypress, Playwright, Appium, Espresso and more. Industry-recognized, shareable on LinkedIn, and built by practitioners, not marketers.
 
-We chose the name TestMu AI to reflect our shift towards intelligent, autonomous testing. While our identity has changed, our core technology and commitment to the testing community stay the same.
+## Learning Resources by TestMu AI (Formerly LambdaTest)
 
-👉 Find [LambdaTest's New Home](https://www.testmuai.com/).
+Learn modern testing through tutorials, guides, videos, and weekly updates:
 
-### 🔭 Explore TestMu AI
+* [TestMu AI Blog](https://www.testmuai.com/blog/)
+* [TestMu AI Learning Hub](https://www.testmuai.com/learning-hub/)
+* [TestMu AI on YouTube](https://www.youtube.com/@TestMuAI)
+* [TestMu AI Newsletter](https://www.testmuai.com/newsletter/)
 
-The same infrastructure LambdaTest customers relied on, now delivered through autonomous AI agents.
+## LambdaTest is Now TestMu AI
 
-- [KaneAI](https://www.testmuai.com/kane-ai/)
-- [Agent-to-Agent Testing](https://www.testmuai.com/agent-to-agent-testing/)
-- [HyperExecute](https://www.testmuai.com/hyperexecute/)
-- [Real Device Cloud](https://www.testmuai.com/real-device-cloud/)
-- [Pricing](https://www.testmuai.com/pricing/)
-- [Documentation](https://www.testmuai.com/support/docs/)
+On **January 12, 2026**, [LambdaTest evolved to TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/), the world's first fully autonomous **Agentic AI Quality Engineering Platform**.
 
-## We are here to help you :headphones:
+Same team. Same infrastructure. Same customer accounts. All existing LambdaTest logins, scripts, capabilities, and integrations continue to work without change.
 
-* Got a query? we are available 24x7 to help. [Contact Us](support@testmuai.com/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
-* For more info, visit - [TestMu AI](https://www.testmuai.com/?utm_source=github&utm_medium=repo&utm_campaign=pytest-selenium-sample)
+👉 Find the new home for [LambdaTest](https://www.testmuai.com).
+
+### How LambdaTest Evolved into TestMu AI
+
+In 2017, we launched LambdaTest with a simple mission: make testing fast, reliable, and accessible. As LambdaTest grew, we expanded into Test Intelligence, Visual Regression Testing, Accessibility Testing, API Testing, and Performance Testing, covering the full depth of the testing lifecycle.
+
+As software development entered the AI era, testing had to evolve, too. We rebuilt the architecture to be AI-native from the ground up, with autonomous agents that **plan, author, execute, analyze, and optimize tests** while keeping humans in the loop. The platform integrates with your repos, CI, IDEs, and terminals, continuously learning from every code change and development signal.
+
+That evolution earned a new name: **TestMu AI**, built for an AI-first future of quality engineering. TestMu is not a new name for us. It is the name of our annual community conference, which has brought together 100,000+ quality engineers to discuss how AI would reshape testing, long before that became an industry norm.
+
+What started as a high-performance cloud testing platform has transformed into an AI-native, multi-agent system powering a connected, end-to-end quality layer. That evolution defined a new identity: LambdaTest evolved into TestMu AI, built for an AI-first future of quality engineering.
+
+## Support
+
+Got a question? Email [support@testmuai.com](mailto:support@testmuai.com) or chat with us 24x7 from our chat portal.
