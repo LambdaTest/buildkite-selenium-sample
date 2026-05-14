@@ -13,7 +13,7 @@
 With TestMu AI (Formerly LambdaTest), you can trigger pytest Selenium tests from a Buildkite CI pipeline on a scalable cloud browser grid. This sample shows how to configure Buildkite CI to run Selenium tests on the TestMu AI cloud.
 
 - [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
-- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/buildkite-integration-with-lambdatest/) for the full setup walkthrough.
+- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for the full setup walkthrough.
 
 ### Prerequisites
 
